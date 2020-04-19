@@ -4,67 +4,44 @@
     
 
 @section('konten') 
-    <section style="overflow-x:hidden;">
-        <div class="row MB-5" style="">
-            <div class="col-md-12">
-                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                          <img src="/img/1.jpg" class="d-block w-100 mx-auto" style="height:100vh" alt="...">
-                          <div class="carousel-caption d-none d-md-block m-5">
-                            <h1 class="text-white font-weight-bold display-1">Imam Maulana Ashari</h1>
-                            <h1 class="font-italic">Fullstack Web Developer</h1>
-                            <a href="#about" id="about" class="btn btn-danger">About ME</a>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+    <section style="overflow-x:hidden;height:100vh;background:url(/img/1.jpg);background-size:cover;background-repeat:no-repeat;background-attachment:fixed" >
+        <div class="container" style="margin-top:500px">
+            <div class="row text-center mt-5">
+                <div class="col-md-12 mt-5">
+                    <h1 class="text-white font-weight-bold mt-5 display-1 text-uppercase">Templates</h1>
+                    <h2 class="font-weight-bold text-white">Love each other</h2>
+                    <a href="#About" id="prdct" class="btn btn-danger font-weight-bold mt-3 w-25">Our Product</a>
+                </div>
             </div>
-        </div>
+        </div>  
     </section>
-    <div class="container MT-5" style="height:100vh">
-        <div class="row">
-            <div class="col-md-12 mt-5 text-center">
-                <h1 id="about" >About me</h1>
-                <hr class="w-50" style="border:1px solid #dedede">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 mt-3 text-center">
-                <img src="/img/1.jpg" class="img-fluid rounded-circle w-50" alt="">
-                <h1 class="mt-5">Imam Maulana Ashari</h1>
-                <h5 class="text-muted">Fullstack Web Developer</h5>
-            </div>
-        </div>
+   
+    <div class="container-fluid" style="height:100vh;">
         <div class="row mt-5">
-            <div class="card-deck">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/img/1.jpg" class="card-img-top" alt="...">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/img/1.jpg" class="card-img-top" alt="...">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/img/1.jpg" class="card-img-top" alt="...">
-                    </div>
-                </div>
+            <div class="col-md-12 mt-5 text-center">
+                <h1 id="About" class="font-weight-bold">Our Product</h1>
+                <hr class="w-25" style="border:1px solid black">
             </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 mt-5">
+            @for($i=1;$i <= 6;$i++)
+            <div class="col mb-4 mt-5">
+                <div class="card">
+                  <img src="/img/{{ $i }}.jpg" class="card-img-top img-fluid" style="height: 400px"  alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Konten {{ $i }}</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+            @endfor
         </div>
     </div>
 @endsection
 @section('query')
     <script>
         $(document).ready(function(){
-          $('#about').click(function(){
+          $('#prdct').click(function(){
             $('html,body').animate({
               scrollTop: $($(this).attr('href') ).offset().top
             },1000);return false;
