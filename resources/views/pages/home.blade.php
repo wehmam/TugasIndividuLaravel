@@ -24,8 +24,9 @@
             </div>
         </div>
         <div class="row row-cols-1 row-cols-md-3 mt-5">
+            
             @for($i=1;$i <= 6;$i++)
-            <div class="col mb-4 mt-5">
+            <div class="col mb-4 mt-3">
                 <div class="card">
                   <img src="/img/{{ $i }}.jpg" class="card-img-top img-fluid" style="height: 400px"  alt="...">
                   <div class="card-body">
@@ -35,6 +36,7 @@
                 </div>
               </div>
             @endfor
+
         </div>
     </div>
 @endsection
