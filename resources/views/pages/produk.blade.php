@@ -18,15 +18,15 @@
    
 
     
-        <div class="container" style="height:100vh">
+        <div class="container-fluid" style="height:100vh">
             <div class="row">
                 <div class="col-md-12">
 
                     <nav>
                         <div class="nav nav-tabs justify-content-center mt-5" id="nav-tab" role="tablist">
-                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Car</a>
+                          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Spareparts</a>
+                          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Rims</a>
                         </div>
                       </nav>
                     
@@ -43,7 +43,7 @@
                                     @for($i=1;$i <= 6;$i++)
                                         <div class="col mb-4 mt-3">
                                             <div class="card">
-                                            <img src="/img/{{ $i }}.jpg" class="card-img-top img-fluid" style="height: 400px"  alt="...">
+                                            <img src="/img/car_img/{{ $i }}.jpg" class="card-img-top img-fluid" style="height: 250px"   alt="...">
                                             <div class="card-body">
                                                 <h5 class="card-title text-center">Konten {{ $i }}</h5>
                                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
